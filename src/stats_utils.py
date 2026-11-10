@@ -2,6 +2,9 @@ import pandas as pd
 
 
 def analyser_ventes(transactions):
+    """ Permet d'afficher les caracteristiques statisques d'une liste de transactions 
+    Args: transactions (list): Liste des montants de transactions bruts. """
+    
     ventes = pd.Series(transactions)
     ventes = ventes[ventes > 0]
     moyenne = ventes.mean()
